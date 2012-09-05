@@ -20,7 +20,7 @@ Transactions:
   if(cursor.length != 8) {
     cursor = '20120909';
   }
-  var tab = '#unhosted';
+  var tab = 'unhosted';
   displayTab();
   document.getElementById('changeTab').value='change';
   document.getElementById('changeTab').onclick=function() {
@@ -59,7 +59,7 @@ Transactions:
         }
       }
       if(thisreport) {
-        remoteStorage.money.setDayBusiness('#unhosted',thisreport.substring(0,4), thisreport.substring(4,6), thisreport.substring(6,8),businesstoday, endBalances);
+        remoteStorage.money.setDayBusiness('unhosted',thisreport.substring(0,4), thisreport.substring(4,6), thisreport.substring(6,8),businesstoday, endBalances);
       }
     }
     for(var i=transactions.length-1;i>=0;i--) {
