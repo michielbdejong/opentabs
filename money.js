@@ -12,6 +12,23 @@ remoteStorage.defineModule('money', function(myPrivateBaseClient, myPublicBaseCl
         for(var i in endBalances) {
           myPrivateBaseClient.storeObject('balance', datePath+'balance/'+i, endBalances[i]);
         }
+      },
+      getTransactions: function(tab) {
+        if(tab=='#unhosted') {
+          return [{
+            from: 'michiel',
+            to: 'pot',
+            comment: 'received 4042 euros from paypal to his personal bank account (comdirect)',
+            amount: 4042,
+            currency: 'EUR',
+            date: '20111031'
+          }];
+        } else {
+          return [];
+        }
+      },
+      getParticipants: function(tab) {
+        return ['michiel', 'javi', 'jan', 'hugo', 'martin', 'e.V.', 'nlnet', 'unhosted-reserved', 'berlinerbank', 'other', 'pot'];
       }
     }
   };
